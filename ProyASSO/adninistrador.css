@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;400&family=Staatliches&display=swap');
+body {
+    color: black;
+    font-size: 25x;
+    background: rgb(253, 253, 253);
+    background-attachment: fixed;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.space {
+    /*border-style: solid;*/
+    /*    border-color: red;*/
+    position: relative;
+    display: flex;
+    /*alinear contenido al centro*/
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.f_registro {
+    background: linear-gradient(to bottom left, rgb(236, 172, 51), rgb(156, 99, 25));
+    /*border: 5px solid black;*/
+    border-radius: 20px;
+    /*relacionado al font size del body*/
+    font-size: 1em;
+    /* centrar vertical y horizontalmente */
+    position: absolute;
+    /*padding-top, padding-right, padding-bottom, padding-left*/
+    padding: 15px;
+    /*width: auto;
+    height: auto;
+    top: 40%;
+    left: auto;*/
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 5px;
+}
+
+input {
+    padding-left: 10px;
+    height: 25px;
+    border-radius: 15px;
+    border: none;
+    margin-bottom: 5px;
+}
+
+input:hover {
+    border: 2px solid rgb(255, 0, 0);
+}
+
+input:focus {
+    border: 2px solid rgb(255, 0, 0);
+}
+
+button[type="submit"] {
+    color: white;
+    background: rgb(79, 111, 168);
+    width: 120px;
+    border: none;
+}
+
+button[type="submit"]:hover {
+    background: rgb(107, 142, 202);
+}
+
+label {
+    /* Tamaño y alineación uniforme */
+    display: inline-block;
+    width: 130px;
+    text-align: right;
+}
+
+button {
+    margin-left: 45%;
+    height: 25px;
+}
+
+.logo {
+    position: relative;
+    /*top: -50%;*/
+}
+
+.logo img {
+    width: 300px;
+    box-shadow: 50px, 5px, orange;
+}
