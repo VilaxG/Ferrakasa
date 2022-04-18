@@ -1,6 +1,9 @@
 body{
+    z-index: 2;
+    /*fondo con imagen y fijado*/
     background-image: url(fondo.jpg);
-    position: fixed;
+    /*position: fixed;*/
+    background-attachment: fixed;
 }
 html {
     scroll-behavior: smooth;
@@ -11,6 +14,7 @@ html {
 }
 
 .seccion {
+    /*seccion de usuarios y materiales*/
     /*border: 1px solid black;*/
     /*background: rgb(16, 34, 192);*/
     margin-top: 90px;
@@ -32,4 +36,14 @@ html {
     color: rgb(218, 96, 15);
     width: 100%;
     margin-bottom: 5px;
+}
+
+.externa{
+    align-items: center;
+    display: none;
+    position: absolute;
+    text-align: justify;
+    z-index: 3;
+    background-color: rgb(151, 196, 155);
+    top: 20%;
 }
