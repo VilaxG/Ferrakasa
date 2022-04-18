@@ -1,3 +1,7 @@
+body{
+    background-image: url(fondo.jpg);
+    position: fixed;
+}
 html {
     scroll-behavior: smooth;
 }
