@@ -14,7 +14,18 @@ html {
     height: 20%;
 }
 
+.seccion a{
+    width: 100%;
+}
+
 .seccion img {
     width: 100%;
     height: 50%;
+}
+
+.icono svg{
+    /*background-color: blue;*/
+    color: rgb(218, 96, 15);
+    width: 100%;
+    margin-bottom: 5px;
 }

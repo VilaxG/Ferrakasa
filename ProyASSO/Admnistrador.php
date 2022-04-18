@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-light" style="background-color: #e06838;">
         <div class="container">
             <a class="navbar-brand" href="#">
