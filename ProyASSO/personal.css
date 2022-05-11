@@ -1,0 +1,24 @@
+body {
+    z-index: 2;
+    /*fondo con imagen y fijado*/
+    background-image: url(fondo.jpg);
+    /*position: fixed;*/
+    background-attachment: fixed;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.barra {
+    background: rgb(221, 91, 4);
+}
+
+.crud {
+    margin-top: 90px;
+    scroll-margin-top: 70px;
+}
+
+input {
+    margin-bottom: 5px;
+}
