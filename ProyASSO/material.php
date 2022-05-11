@@ -1,7 +1,24 @@
 <?php
 include("conexion.php");
 $sql = "SELECT *  FROM material";
-$qry = "SELECT id_tienda from tienda;";
+$qry = "SELECT id_tienda,nombre_tienda from tienda;";
+$sql= 
+"SELECT
+    m.id_material id_m,
+    concat(m.id_tienda, ' - ', t.nombre_tienda) tienda,
+    m.producto producto,
+    u.text_medida medida,
+    m.almacen almacen,
+    m.descripcion descripcion,
+    concat('$', m.precio) precio,
+    m.categoria categoria
+FROM
+    material m
+JOIN tienda t ON
+    t.id_tienda = m.id_tienda
+JOIN unidad_medida u ON
+    u.id_medida = m.id_medida;
+";
 $rw = mysqli_query($conn, $qry);
 
 $query = mysqli_query($conn, $sql);
@@ -32,14 +49,14 @@ $query = mysqli_query($conn, $sql);
     <div class="container crud">
         <div class="row">
             <div class="col-3">
-                <h2>Registrar nueva tienda</h2>
+                <h2>Registrar nuevo meterial</h2>
                 <form action="material_a.php" method="POST">
-                    <input type="number" class="form-control " name="id_material" placeholder="Id">
+                    <input type="number" class="form-control " name="id_m" placeholder="Id">
                     <select style="width: 100%; margin-bottom: 5px;">
                         <?php                        
                         while ($rwid = mysqli_fetch_array($rw)) {
                         ?>
-                            <option value="<?php $rwid['id_tienda'] ?>"><?php echo $rwid['id_tienda'] ?></option>
+                            <option value="<?php $rwid['id_tienda'] ?>"><?php echo $rwid['id_tienda'].'-'.$rwid['nombre_tienda'] ?></option>
                         <?php
                         }
                         ?>
@@ -53,15 +70,18 @@ $query = mysqli_query($conn, $sql);
                 </form>
             </div>
             <div class="col-9">
-                <h2>Modificacion y Bajas de tiendas</h2>
+                <h2>Modificacion y Bajas de materiales</h2>
                 <table class="table">
                     <thead class="table-success table-striped">
                         <tr>
                             <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Direccion</th>
-                            <th>Telefono</th>
-                            <th>Encargado</th>
+                            <th>Tienda</th>
+                            <th>Descripcion</th>
+                            <th>Producto</th>
+                            <th>Unidades en almacen</th>
+                            <th>Categoria</th>
+                            <th>Medida</th>
+                            <th>Precio unitario</th>
                             <th></th>
                             <th></th>
                         </tr>
@@ -72,13 +92,16 @@ $query = mysqli_query($conn, $sql);
                         while ($row = mysqli_fetch_array($query)) {
                         ?>
                             <tr>
-                                <th><?php echo $row['id_material'] ?></th>
-                                <th><?php echo $row['id_tienda'] ?></th>
-                                <th><?php echo $row['cve_articulo'] ?></th>
+                                <th><?php echo $row['id_m'] ?></th>
+                                <th><?php echo $row['tienda'] ?></th>
+                                <th><?php echo $row['descripcion'] ?></th>
                                 <th><?php echo $row['producto'] ?></th>
                                 <th><?php echo $row['almacen'] ?></th>
-                                <th><a href="tienda_mod.php?id_tienda=<?php echo $row['id_tienda'] ?>" class="btn btn-info">Editar</a></th>
-                                <th><a href="tienda_b.php?id_tienda=<?php echo $row['id_tienda'] ?>" class="btn btn-danger">Eliminar</a></th>
+                                <th><?php echo $row['categoria'] ?></th>
+                                <th><?php echo $row['medida'] ?></th>
+                                <th><?php echo $row['precio'] ?></th>
+                                <th><a href="material_mod.php?id_tienda=<?php echo $row['id_m'] ?>" class="btn btn-info">Editar</a></th>
+                                <th><a href="material.php?id_tienda=<?php echo $row['id_m'] ?>" class="btn btn-danger">Eliminar</a></th>
                             </tr>
                         <?php
                         }

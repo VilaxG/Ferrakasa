@@ -5,6 +5,7 @@ $query = mysqli_query($conn, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,10 +31,10 @@ $query = mysqli_query($conn, $sql);
             <div class="col-3">
                 <h2>Registrar nueva tienda</h2>
                 <form action="tienda_a.php" method="POST">
-                    <input type="text" class="form-control " name="id_tienda" placeholder="Id">
+                    <!--<input type="number" class="form-control " name="id_tienda" placeholder="Id">-->
                     <input type="text" class="form-control " name="nombre_tienda" placeholder="Nombre">
                     <input type="text" class="form-control " name="direccion" placeholder="Direccion">
-                    <input type="text" class="form-control " name="telefono" placeholder="Telefono">
+                    <input type="number" class="form-control " name="telefono" placeholder="Telefono">
                     <input type="text" class="form-control " name="encargado" placeholder="Encargado">
                     <input type="submit" class="btn btn-primary">
                 </form>
