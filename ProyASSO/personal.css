@@ -19,6 +19,7 @@ html {
     scroll-margin-top: 70px;
 }
 
-input {
+input,textarea {
     margin-bottom: 5px;
 }
+

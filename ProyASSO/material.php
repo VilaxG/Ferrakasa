@@ -1,11 +1,22 @@
 <?php
 include("conexion.php");
-$sql = "SELECT *  FROM material";
-$qry = "SELECT id_tienda,nombre_tienda from tienda;";
-$sql= 
-"SELECT
+#$sql = "SELECT *  FROM material";
+#$qry = "SELECT id_tienda,nombre_tienda from tienda;";
+$sql_med = "SELECT
+    id_medida,
+    text_medida
+FROM
+unidad_medida;";
+
+$sql_ti = "SELECT 
+id_tienda, nombre_tienda 
+FROM 
+tienda;";
+$sql =
+    "SELECT
     m.id_material id_m,
     concat(m.id_tienda, ' - ', t.nombre_tienda) tienda,
+    m.id_tienda id_t,
     m.producto producto,
     u.text_medida medida,
     m.almacen almacen,
@@ -17,11 +28,9 @@ FROM
 JOIN tienda t ON
     t.id_tienda = m.id_tienda
 JOIN unidad_medida u ON
-    u.id_medida = m.id_medida;
+    u.id_medida = m.id_medida
+    ORDER BY id_m;
 ";
-$rw = mysqli_query($conn, $qry);
-
-$query = mysqli_query($conn, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -49,23 +58,38 @@ $query = mysqli_query($conn, $sql);
     <div class="container crud">
         <div class="row">
             <div class="col-3">
-                <h2>Registrar nuevo meterial</h2>
+                <h2>Registrar nuevo material</h2>
                 <form action="material_a.php" method="POST">
-                    <input type="number" class="form-control " name="id_m" placeholder="Id">
-                    <select style="width: 100%; margin-bottom: 5px;">
-                        <?php                        
-                        while ($rwid = mysqli_fetch_array($rw)) {
+                    <select class="form-select" id ="id_t" name="id_t" style="margin-bottom: 5px;">
+                        <?php
+                        $query = mysqli_query($conn, $sql_ti);
+                        while ($row = mysqli_fetch_array($query)) {
                         ?>
-                            <option value="<?php $rwid['id_tienda'] ?>"><?php echo $rwid['id_tienda'].'-'.$rwid['nombre_tienda'] ?></option>
+                            <option value="<?php echo $row['id_tienda'] ?>">
+                                <?php echo $row['id_tienda'] . ' - ' . $row['nombre_tienda'] ?>
+                            </option>
                         <?php
                         }
                         ?>
                     </select>
-                    <input type="number" class="form-control " name="cve_articulo" placeholder="Clave del articulo">
-                    <input type="text" class="form-control " name="producto" placeholder="Categoria">
-                    <input type="text" class="form-control " name="almacen" placeholder="Almacen">
+
+                    <select class="form-select" id="medida" name="medida" style="margin-bottom: 5px;">
+                    <?php
+                        $query = mysqli_query($conn, $sql_med);
+                        while ($row = mysqli_fetch_array($query)) {
+                        ?>
+                            <option value="<?php echo $row['id_medida'] ?>">
+                                <?php echo $row['text_medida'] ?>
+                            </option>
+                        <?php
+                        }
+                        ?>
+                    </select>
+                    <input type="text" class="form-control " name="producto" placeholder="Producto">
+                    <input type="number" class="form-control " name="almacen" placeholder="Almacen">
                     <input type="text" class="form-control " name="descripcion" placeholder="Descripcion">
-                    <input type="number" class="form-control " name="precio" placeholder="precio por pieza">
+                    <input type="number" class="form-control " name="precio" placeholder="Precio por pieza">
+                    <input type="text" class="form-control " name="categoria" placeholder="Categoria">
                     <input type="submit" class="btn btn-primary">
                 </form>
             </div>
@@ -89,6 +113,7 @@ $query = mysqli_query($conn, $sql);
 
                     <tbody>
                         <?php
+                        $query = mysqli_query($conn, $sql);
                         while ($row = mysqli_fetch_array($query)) {
                         ?>
                             <tr>
@@ -100,8 +125,8 @@ $query = mysqli_query($conn, $sql);
                                 <th><?php echo $row['categoria'] ?></th>
                                 <th><?php echo $row['medida'] ?></th>
                                 <th><?php echo $row['precio'] ?></th>
-                                <th><a href="material_mod.php?id_tienda=<?php echo $row['id_m'] ?>" class="btn btn-info">Editar</a></th>
-                                <th><a href="material.php?id_tienda=<?php echo $row['id_m'] ?>" class="btn btn-danger">Eliminar</a></th>
+                                <th><a href="material_mod.php?id_material=<?php echo $row['id_m'] ?>" class="btn btn-info">Editar</a></th>
+                                <th><a href="material.php?id_material=<?php echo $row['id_m'] ?>" class="btn btn-danger">Eliminar</a></th>
                             </tr>
                         <?php
                         }

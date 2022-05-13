@@ -1,23 +1,26 @@
 <?php
 include("conexion.php");
 
-$id_material=$_POST['id_material'];
-$id_tienda=$_POST['id_tienda'];
-$cve_articulo=$_POST['cve_articulo'];
+$medida=$_POST['medida'];
+$id_tienda=$_POST['id_t'];
+$descipcion=$_POST['descripcion'];
 $producto=$_POST['producto'];
-$encargado=$_POST['almacen'];
-$_vendedor=$_POST['descripcion'];
-$_vendedor=$_POST['precio'];
+$almacen=$_POST['almacen'];
+$categoria=$_POST['categoria'];
+$precio=$_POST['precio'];
 #$_vendedor=$_POST[''];
-
-$sql="INSERT INTO `tienda` (`nombre_tienda`, `direccion`, `telefono`,`encargado`) VALUES('$nombre_tienda','$direccion','$telefono','$encargado')";
+echo "eñ id de su tienda es: ".$id_tienda;
+$sql="INSERT INTO 
+`material`(`id_tienda`, `id_medida`, `producto`, `almacen`, `descripcion`, `precio`, `categoria`) 
+VALUES
+('$id_tienda','$medida','$producto','$almacen','$descipcion','$precio','$categoria');
+";
 $query= mysqli_query($conn,$sql);
 print("Exito");
 if($query){
-    print("Exito");
-    Header("Location: tienda.php");
+    Header("Location: material.php");
     
 }else {
 }
-
+    
 ?>
