@@ -24,6 +24,7 @@ html {
 
 .seccion a{
     width: 100%;
+    display: flex;
 }
 
 .seccion img {
@@ -31,7 +32,7 @@ html {
     height: 50%;
 }
 
-.icono svg{
+svg{
     /*background-color: blue;*/
     color: rgb(218, 96, 15);
     width: 100%;

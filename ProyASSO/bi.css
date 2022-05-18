@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    z-index: 2;
+    /*fondo con imagen y fijado*/
+    background-image: url(fondo.jpg);
+    /*position: fixed;*/
+    background-attachment: fixed;
+    font-family: 'Patua One';
+    font-size: larger;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.barra {
+    background: rgb(221, 91, 4);
+}
+
+.menuR {
+    margin-top: 90px;
+    scroll-margin-top: 70px;
+    border-radius: 30px;
+}
+
+.subMR {
+    border: 3px groove rgb(56, 27, 218);
+    border-radius: 10px;
+    padding: 1px 0px 1px 3px;
+    background-color: whitesmoke;
+}
+
+button {
+    width: auto;
+    text-align: center;
+}

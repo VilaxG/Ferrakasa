@@ -8,6 +8,7 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="control.css">
 </head>
 
@@ -21,75 +22,81 @@
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!--<div class="collapse navbar-collapse" id="navbarText">
+            <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#sec1">Altas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#sec2">Bajas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sec3">Modificaciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Admnistrador.html">Salir</a>
+
                     </li>
                 </ul>
-                <span class="navbar-text">
-                    Navbar text with an inline element
+                <span class="navbar-item">
+                    <a href="#administrador.php" class="btn btn-info    ">Cerrar sesion</a>
                 </span>
             </div>
--->
         </div>
     </nav>
-    <div class="container secciones">
-        <div class="row seccion">
-            <h2>Personal</h2>
-            <div class="col-2 icono">
-                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="currentColor"
-                    class="bi bi-person-circle" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                    <path fill-rule="evenodd"
-                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-                </svg>
-                <a class="btn btn-warning" href="#" role="button"> Administrador</a>
+    <div class=" secciones">
+        <div class="row justify-content-evenly  seccion" style="margin-top: 15%;">
+            <div class="col-2">
+                <div class="card" style="width: 18rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="currentColor"
+                        class="bi bi-person-bounding-box card-img-top" viewBox="0 0 16 16"
+                        style="margin-top: 10px; color: rgb(218, 96, 15);">
+                        <path
+                            d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z" />
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    </svg>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Personal</h5>
+                        <p class="card-text">
+                            CRUD para administrar al personal total
+                            <br>
+                        </p>
+                        <a href="personal.php" class="btn btn-warning">Administrar</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-2 icono">
-                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="currentColor"
-                    class="bi bi-person-circle" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                    <path fill-rule="evenodd"
-                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-                </svg>
-                <a class="btn btn-warning" href="personal.php" role="button">Vendedores</a>
+
+            <div class="col-2">
+                <div class="card" style="width: 18rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="currentColor"
+                        class="bi bi-list card-img-top" viewBox="0 0 16 16" style="color: rgb(218, 96, 15);">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Materiales</h5>
+                        <p class="card-text">
+                            CRUD para administrar los materiales de los diferentes inventarios
+                        </p>
+                        <a href="material.php" class="btn btn-warning">Administrar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="card" style="width: 18rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="currentColor"
+                        class="bi bi-shop card-img-top" viewBox="0 0 16 16" style="color: rgb(218, 96, 15);">
+                        <path
+                            d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z" />
+                    </svg>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Tienda</h5>
+                        <p class="card-text">
+                            CRUD para administrar los locales de la franqicia
+                            <br><br>
+                        </p>
+                        <a href="tienda.php" class="btn btn-warning">Administrar</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row seccion">
-            <h2>Articulos</h2>
-            <div class="col-2 icono">
-                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="currentColor"
-                    class="bi bi-pencil-square" viewBox="0 0 16 16">
-                    <path
-                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                    <path fill-rule="evenodd"
-                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                </svg>
-                <a class="btn btn-warning" href="#" role="button">Acero</a>
-            </div>
-            <div class="col-2 icono">
-                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="currentColor"
-                    class="bi bi-pencil-square" viewBox="0 0 16 16">
-                    <path
-                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                    <path fill-rule="evenodd"
-                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                </svg>
-                <a class="btn btn-warning" href="#" role="button">Madera</a>
-            </div>
-        </div>
+
+        <!--
         <button onclick="aparecer('externa')">Clic</button>
-        
         <div class="externa col-10" id="externa">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque labore voluptatum rerum eius quasi
                 explicabo totam enim voluptatem laudantium cum iste, consectetur, nam illum harum ipsum expedita
@@ -114,9 +121,10 @@
                 provident consequuntur repudiandae, adipisci facilis. Obcaecati, veritatis voluptatum. Autem totam eius,
                 assumenda sint tempore cum libero non repellendus dignissimos tenetur delectus, facilis nobis? Quas sunt
                 .</p>
-                <button onclick="aparecer('externa')">Cerrar</button>
+            <button onclick="aparecer('externa')">Cerrar</button>
         </div>
-    
+-->
+
     </div>
     <script src="adminpage.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

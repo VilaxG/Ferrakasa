@@ -1,19 +1,19 @@
 <?php
-include 'conexion.php';
+include ('conexion.php');
 $correo = $_POST['correo'];
 $pass = $_POST['contrasena'];
 if(empty($correo) || empty($pass)){
-    echo "Datos vacios";
+    Header("Location: administrador.php");
 } else{
-    $query = "select nombre,apellidos from usuario where email='".$correo."'and passwdHash='".$pass."';";    
+    $query = "select idUsuario from usuario where email='".$correo."'and passwdHash='".$pass."';";    
     $result=mysqli_query($conn,$query);
-    if(!$result){
-        echo "datos incorrectos";
+    $row = mysqli_fetch_array($result);
+    if($row[0]!=null){
+        echo "hay datos";
+        header("Location: adminpage.php");
     }else{
-        /*while ($row = $result->fetch_assoc()) {*/
-            $row = $result->fetch_assoc();
-            echo 'bienvenido '.$row['nombre']." ".$row['apellidos']  ;
-        /*} */
+        echo "no hay datos";
+        header("Location: administrador.php");
     }
 }
    
