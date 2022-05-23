@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aceros - Materiales</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    
+    <!--    Navbar  -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-warning" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="imagenes/logofk.webp" alt="" width="250">
+            </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mx-auto"></div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="productos.html">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="materiales.html">Materiales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="an.html">Acerca de Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </nav>
+    <!--    Fin Navbar  -->
+
+    <div class="container-md p-5">
+        <div class="row pt-5">
+            <h3 class="text-left pb-5 pt-5 h1" style="color: rgb(201, 101, 20);">Aceros</h3>
+        </div>
+        <!--Renglon 1-->
+        <div class="row">
+            <div class="col-sm">
+                <div class="card w-100 card-border mb-3">
+                    <img src="imagenes/aceros.jpeg" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Varilla</h5>
+                      <select class="form-select" aria-label="cmbVarilla" id="varilla" onchange="ShowSelected();">
+                        <option selected>Selecciona una medida</option>
+                        <option value="1">Varilla 5/16"</option>
+                        <option value="2">Varilla 1/2"</option>
+                        <option value="3">Varilla 3/4"</option>
+                        <option value="4">Varilla 1"</option>
+                      </select>
+                      <p>   </p>
+                      <button style="border-radius: 50%; width: 30px" id = 'aumentar' onclick="aumentar('Cantidad0')">+</button>
+                      <button style="border-radius: 50%; width: 30px" id = 'disminuir' onclick="disminuir('Cantidad0')">-</button>
+                      <input style="width: 120px; height: 25px;" type='number' id="Cantidad0" value="0" min="0"></p>
+                      <a href="aceros.html" class="btn btn-danger">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+              <div class="card w-100 card-border mb-3">
+                  <img src="imagenes/estribos.webp" class="card-img-top w-100" width="150" height="200" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Anillo 1/4"</h5>
+                    <select class="form-select" aria-label="cmbAnillos">
+                      <option selected>Selecciona una medida</option>
+                      <option value="1">Anillo 1/4" 10x10</option>
+                      <option value="2">Anillo 1/4" 10x15</option>
+                      <option value="3">Anillo 1/4" 10x20</option>
+                      <option value="4">Anillo 1/4" 10x25</option>
+                    </select>
+                    <p>   </p>
+                    <button style="border-radius: 50%; width: 30px" id = 'aumentar' onclick="aumentar('Cantidad1')">+</button>
+                    <button style="border-radius: 50%; width: 30px" id = 'disminuir' onclick="disminuir('Cantidad1')">-</button>
+                    <input style="width: 120px; height: 25px;" type='number' id="Cantidad1" value="0" min="0"></p>
+                    <a href="aceros.html" class="btn btn-danger">Agregar al carrito</a>
+                  </div>
+              </div>
+            </div>
+
+          <div class="col-sm">
+            <div class="card w-100 card-border mb-3">
+                <img src="imagenes/estribos.webp" class="card-img-top w-150" width="150" height="200" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Anillo 3/8"</h5>
+                  <select class="form-select" aria-label="cmbAnillos">
+                    <option selected>Selecciona una medida</option>
+                    <option value="1">Anillo 3/8" 10x10</option>
+                    <option value="2">Anillo 3/8" 10x15</option>
+                    <option value="3">Anillo 3/8" 10x20</option>
+                    <option value="4">Anillo 3/8" 10x25</option>
+                  </select>
+                  <p>   </p>
+                  <button style="border-radius: 50%; width: 30px" id = 'aumentar' onclick="aumentar('Cantidad2')">+</button>
+                  <button style="border-radius: 50%; width: 30px" id = 'disminuir' onclick="disminuir('Cantidad2')">-</button>
+                  <input style="width: 120px; height: 25px;" type='number' id="Cantidad2" value="0" min="0"></p>
+                  <a href="aceros.html" class="btn btn-danger">Agregar al carrito</a>
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+
+          <div class="col-sm">
+            <div class="card w-100 card-border mb-3">
+                <img src="imagenes/estribos.webp" class="card-img-top w-100" width="100" height="200" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Anillo 1/2"</h5>
+                  <select class="form-select" aria-label="cmbAnillos">
+                    <option selected>Selecciona una medida</option>
+                    <option value="1">Anillo 1/2" 10x10</option>
+                    <option value="2">Anillo 1/2" 10x15</option>
+                    <option value="3">Anillo 1/2" 10x20</option>
+                    <option value="4">Anillo 1/2" 10x25</option>
+                  </select>
+                  <p>   </p>
+                  <button style="border-radius: 50%; width: 30px" id = 'aumentar' onclick="aumentar('Cantidad3')">+</button>
+                  <button style="border-radius: 50%; width: 30px" id = 'disminuir' onclick="disminuir('Cantidad3')">-</button>
+                  <input style="width: 120px; height: 25px;" type='number' id="Cantidad3" value="0" min="0"></p>
+                  <a href="aceros.html" class="btn btn-danger">Agregar al carrito</a>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-sm">
+            <div class="card w-100 card-border mb-3">
+                <img src="imagenes/estribos.webp" class="card-img-top w-100" width="100" height="200" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Anillo 3/4"</h5>
+                  <select class="form-select" aria-label="cmbAnillos">
+                    <option selected>Selecciona una medida</option>
+                    <option value="1">Anillo 3/4" 10x10</option>
+                    <option value="2">Anillo 3/4" 10x15</option>
+                    <option value="3">Anillo 3/4" 10x20</option>
+                    <option value="4">Anillo 3/4" 10x25</option>
+                  </select>
+                  <p>   </p>
+                  <button style="border-radius: 50%; width: 30px" id = 'aumentar' onclick="aumentar('Cantidad4')">+</button>
+                  <button style="border-radius: 50%; width: 30px" id = 'disminuir' onclick="disminuir('Cantidad4')">-</button>
+                  <input style="width: 120px; height: 25px;" type='number' id="Cantidad4" value="0" min="0"></p>
+                  <a href="aceros.html" class="btn btn-danger">Agregar al carrito</a>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-sm">
+            <div class="card w-100 card-border mb-3">
+                <img src="imagenes/estribos.webp" class="card-img-top w-100" width="100" height="200" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Anillo 1"</h5>
+                  <select class="form-select" aria-label="cmbAnillos">
+                    <option selected>Selecciona una medida</option>
+                    <option value="1">Anillo 1" 10x10</option>
+                    <option value="2">Anillo 1" 10x15</option>
+                    <option value="3">Anillo 1" 10x20</option>
+                    <option value="4">Anillo 1" 10x25</option>
+                  </select>
+                  <p>   </p>
+                  <button style="border-radius: 50%; width: 30px" id = 'aumentar' onclick="aumentar('Cantidad5')">+</button>
+                  <button style="border-radius: 50%; width: 30px" id = 'disminuir' onclick="disminuir('Cantidad5')">-</button>
+                  <input style="width: 120px; height: 25px;" type='number' id="Cantidad5" value="0" min="0"></p>
+                  <a href="aceros.html" class="btn btn-danger">Agregar al carrito</a>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm">
+            <div class="card w-100 card-border mb-3">
+                <img src="imagenes/armex.jpg" class="card-img-top w-100" width="100" height="200" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Armex</h5>
+                  <select class="form-select" aria-label="cmbAnillos">
+                    <option selected>Selecciona una medida</option>
+                    <option value="1">Diseño 15-25-4 Longitud 5.6m Dimensiones 15x25cm</option>
+                    <option value="2">Diseño 15-30-4 Longitud 5.6m Dimensiones 15x30cm</option>
+                    <option value="3">Diseño 12-12-4 Longitud 5.6m Dimensiones 12x12cm</option>
+                    <option value="4">Diseño 12-20-4 Longitud 5.6m Dimensiones 12x20cm</option>
+                  </select>
+                  <p>   </p>
+                  <button style="border-radius: 50%; width: 30px" id = 'aumentar' onclick="aumentar('Cantidad6')">+</button>
+                  <button style="border-radius: 50%; width: 30px" id = 'disminuir' onclick="disminuir('Cantidad6')">-</button>
+                  <input style="width: 120px; height: 25px;" type='number' id="Cantidad6" value="0" min="0"></p>
+                  <a href="aceros.html" class="btn btn-danger">Agregar al carrito</a>
+                </div>
+            </div>
+        </div>
+      
+        <div class="col-sm">
+            <div class="card w-100 card-border mb-3">
+                <img src="imagenes/clavos.jpg" class="card-img-top w-100" width="100" height="200" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Clavo con cabeza</h5>
+                  <select class="form-select" aria-label="cmbClavos">
+                    <option selected>Selecciona una medida</option>
+                    <option value="1">Clavo 1"</option>
+                    <option value="2">Clavo 1 1/2"</option>
+                    <option value="3">Clavo 2"</option>
+                    <option value="4">Clavo 2 1/2"</option>
+                    <option value="5">Clavo 3"</option>
+                    <option value="6">Clavo 4"</option>
+                  </select>
+                  <p>   </p>
+                  <button style="border-radius: 50%; width: 30px" id = 'aumentar' onclick="aumentar('Cantidad7')">+</button>
+                  <button style="border-radius: 50%; width: 30px" id = 'disminuir' onclick="disminuir('Cantidad7')">-</button>
+                  <input style="width: 120px; height: 25px;" type='number' id="Cantidad7" value="0" min="0"></p>
+                  <a href="aceros.html" class="btn btn-danger">Agregar al carrito</a>
+                </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card w-100 card-border mb-3">
+                <img src="imagenes/clavosc.jpg" class="card-img-top w-100" width="100" height="200" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Clavo sin cabeza</h5>
+                  <select class="form-select" aria-label="cmbClavos">
+                    <option selected>Selecciona una medida</option>
+                    <option value="1">Clavo 1"</option>
+                    <option value="2">Clavo 1 1/2"</option>
+                    <option value="3">Clavo 2"</option>
+                    <option value="4">Clavo 2 1/2"</option>
+                    <option value="5">Clavo 3"</option>
+                    <option value="6">Clavo 4"</option>
+                  </select>
+                  <p>   </p>
+                  <button style="border-radius: 50%; width: 30px" id = 'aumentar' onclick="aumentar('Cantidad8')">+</button>
+                  <button style="border-radius: 50%; width: 30px" id = 'disminuir' onclick="disminuir('Cantidad8')">-</button>
+                  <input style="width: 120px; height: 25px;" type='number' id="Cantidad8" value="0" min="0"></p>
+                  <a href="aceros.html" class="btn btn-danger">Agregar al carrito</a>
+                </div>
+            </div>
+        </div>
+      </div>
+
+
+        <div class="row">
+          <div class="col-sm">
+            <div class="card w-100 card-border mb-3">
+                <img src="imagenes/clavopc.jpg" class="card-img-top w-100" width="100" height="200" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Clavo para concreto</h5>
+                  <select class="form-select" aria-label="cmbClavos">
+                    <option selected>Selecciona una medida</option>
+                    <option value="1">Clavo 1"</option>
+                    <option value="2">Clavo 1 1/2"</option>
+                    <option value="3">Clavo 2"</option>
+                    <option value="4">Clavo 2 1/2"</option>
+                    <option value="5">Clavo 3"</option>
+                    <option value="6">Clavo 4"</option>
+                  </select>
+                  <p>   </p>
+                  <button style="border-radius: 50%; width: 30px" id = 'aumentar' onclick="aumentar('Cantidad9')">+</button>
+                  <button style="border-radius: 50%; width: 30px" id = 'disminuir' onclick="disminuir('Cantidad9')">-</button>
+                  <input style="width: 120px; height: 25px;" type='number' id="Cantidad9" value="0" min="0"></p>
+                  <a href="aceros.html" class="btn btn-danger">Agregar al carrito</a>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-sm">
+            <div class="card w-100 card-border mb-3">
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text"></p>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-sm">
+                <div class="card w-100 card-border mb-3">
+                    <div class="card-body">
+                      <h5 class="card-title"></h5>
+                      <p class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="js/funciones.js"></script>
+</body>
+</html>

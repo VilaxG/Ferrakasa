@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envasados - Materiales</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!--    Navbar  -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-warning" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="imagenes/logofk.webp" alt="" width="250">
+            </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mx-auto"></div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="productos.html">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="materiales.html">Materiales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="an.html">Acerca de Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </nav>
+    <!--    Fin Navbar  -->
+
+    <div class="container-md p-5">
+        <div class="row pt-5">
+            <h3 class="text-left pb-5 pt-5 h1" style="color: rgb(201, 101, 20);">Envasados</h3>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="card w-100 card-border mb-3">
+                    <img src="imagenes/cemex.webp" class="card-img-top w-100" width="100" height="200" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Cemento Cemex</h5>
+                      <select class="form-select" aria-label="cmbClavos">
+                        <option selected>Selecciona una medida</option>
+                        <option value="1">Cemex 50kg</option>
+                        <option value="2">Cemex 25kg</option>
+                        <option value="3">Cemex 10kg</option>
+                      </select>
+                      <p>   </p>
+                      <button style="border-radius: 50%; width: 30px" id = 'aumentar' onclick="aumentar('Cantidad10')">+</button>
+                      <button style="border-radius: 50%; width: 30px" id = 'disminuir' onclick="disminuir('Cantidad10')">-</button>
+                      <input style="width: 120px; height: 25px;" type='number' id="Cantidad10" value="0" min="0"></p>
+                      <a href="aceros.html" class="btn btn-danger">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-sm">
+                <div class="card w-100 card-border mb-3">
+                    <img src="imagenes/cruzazul.jpg" class="card-img-top w-100" width="100" height="200" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Cemento Cruz Azul</h5>
+                      <select class="form-select" aria-label="cmbClavos">
+                        <option selected>Selecciona una medida</option>
+                        <option value="1">Cruz Azul 50kg</option>
+                        <option value="2">Cruz Azul 25kg</option>
+                        <option value="3">Cruz Azul 10kg</option>
+                      </select>
+                      <p>   </p>
+                      <button style="border-radius: 50%; width: 30px" id = 'aumentar' onclick="aumentar('Cantidad11')">+</button>
+                      <button style="border-radius: 50%; width: 30px" id = 'disminuir' onclick="disminuir('Cantidad11')">-</button>
+                      <input style="width: 120px; height: 25px;" type='number' id="Cantidad11" value="0" min="0"></p>
+                      <a href="aceros.html" class="btn btn-danger">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-sm">
+              <div class="card w-100 card-border mb-3">
+                  <img src="imagenes/envasados.webp" class="card-img-top w-100" width="100" height="200" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Cemento Moctezuma</h5>
+                    <select class="form-select" aria-label="cmbClavos">
+                      <option selected>Selecciona una medida</option>
+                      <option value="1">Moctezuma 50kg</option>
+                      <option value="2">Moctezuma 25kg</option>
+                      <option value="3">Moctezuma 10kg</option>
+                    </select>
+                    <p>   </p>
+                    <button style="border-radius: 50%; width: 30px" id = 'aumentar' onclick="aumentar('Cantidad12')">+</button>
+                    <button style="border-radius: 50%; width: 30px" id = 'disminuir' onclick="disminuir('Cantidad12')">-</button>
+                    <input style="width: 120px; height: 25px;" type='number' id="Cantidad12" value="0" min="0"></p>
+                    <a href="aceros.html" class="btn btn-danger">Agregar al carrito</a>
+                  </div>
+              </div>
+          </div>
+    
+        </div>
+
+
+        <div class="row">
+          <div class="col-sm">
+              <div class="card w-100 card-border mb-3">
+                  <img src="imagenes/cemexyeso.jpg" class="card-img-top w-100" width="100" height="200" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Yeso Cemex</h5>
+                    <select class="form-select" aria-label="cmbClavos">
+                      <option selected>Selecciona una medida</option>
+                      <option value="1">Cemex 50kg</option>
+                      <option value="2">Cemex 25kg</option>
+                      <option value="3">Cemex 10kg</option>
+                    </select>
+                    <p>   </p>
+                    <button style="border-radius: 50%; width: 30px" id = 'aumentar' onclick="aumentar('Cantidad13')">+</button>
+                    <button style="border-radius: 50%; width: 30px" id = 'disminuir' onclick="disminuir('Cantidad13')">-</button>
+                    <input style="width: 120px; height: 25px;" type='number' id="Cantidad13" value="0" min="0"></p>
+                    <a href="aceros.html" class="btn btn-danger">Agregar al carrito</a>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="col-sm">
+            <div class="card w-100 card-border mb-3">
+                <img src="imagenes/cayeso.png" class="card-img-top w-100" width="100" height="200" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Yeso Cruz Azul</h5>
+                  <select class="form-select" aria-label="cmbClavos">
+                    <option selected>Selecciona una medida</option>
+                    <option value="1">Cruz Azul 50kg</option>
+                    <option value="2">Cruz Azul 25kg</option>
+                    <option value="3">Cruz Azul 10kg</option>
+                  </select>
+                  <p>   </p>
+                  <button style="border-radius: 50%; width: 30px" id = 'aumentar' onclick="aumentar('Cantidad14')">+</button>
+                  <button style="border-radius: 50%; width: 30px" id = 'disminuir' onclick="disminuir('Cantidad14')">-</button>
+                  <input style="width: 120px; height: 25px;" type='number' id="Cantidad14" value="0" min="0"></p>
+                  <a href="aceros.html" class="btn btn-danger">Agregar al carrito</a>
+                </div>
+            </div>
+        </div>
+  
+        <div class="col-sm">
+          <div class="card w-100 card-border mb-3">
+              <img src="imagenes/moctezumayeso.jpg" class="card-img-top w-100" width="100" height="200" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Yeso Moctezuma</h5>
+                <select class="form-select" aria-label="cmbClavos">
+                  <option selected>Selecciona una medida</option>
+                  <option value="1">Moctezuma 50kg</option>
+                  <option value="2">Moctezuma 25kg</option>
+                  <option value="3">Moctezuma 10kg</option>
+                </select>
+                <p>   </p>
+                <button style="border-radius: 50%; width: 30px" id = 'aumentar' onclick="aumentar('Cantidad15')">+</button>
+                <button style="border-radius: 50%; width: 30px" id = 'disminuir' onclick="disminuir('Cantidad15')">-</button>
+                <input style="width: 120px; height: 25px;" type='number' id="Cantidad15" value="0" min="0"></p>
+                <a href="aceros.html" class="btn btn-danger">Agregar al carrito</a>
+              </div>
+          </div>
+      </div>
+  
+      </div>
+
+
+      <div class="row">
+        <div class="col-sm">
+            <div class="card w-100 card-border mb-3">
+                <img src="imagenes/cemexmortero.jpg" class="card-img-top w-100" width="100" height="200" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Mortero Cemex</h5>
+                  <select class="form-select" aria-label="cmbClavos">
+                    <option selected>Selecciona una medida</option>
+                    <option value="1">Cemex 50kg</option>
+                    <option value="2">Cemex 25kg</option>
+                    <option value="3">Cemex 10kg</option>
+                  </select>
+                  <p>   </p>
+                  <button style="border-radius: 50%; width: 30px" id = 'aumentar' onclick="aumentar('Cantidad16')">+</button>
+                  <button style="border-radius: 50%; width: 30px" id = 'disminuir' onclick="disminuir('Cantidad16')">-</button>
+                  <input style="width: 120px; height: 25px;" type='number' id="Cantidad16" value="0" min="0"></p>
+                  <a href="aceros.html" class="btn btn-danger">Agregar al carrito</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card w-100 card-border mb-3">
+              <img src="imagenes/cruzazul.jpg" class="card-img-top w-100" width="100" height="200" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Mortero Cruz Azul</h5>
+                <select class="form-select" aria-label="cmbClavos">
+                  <option selected>Selecciona una medida</option>
+                  <option value="1">Cruz Azul 50kg</option>
+                  <option value="2">Cruz Azul 25kg</option>
+                  <option value="3">Cruz Azul 10kg</option>
+                </select>
+                <p>   </p>
+                <button style="border-radius: 50%; width: 30px" id = 'aumentar' onclick="aumentar('Cantidad17')">+</button>
+                <button style="border-radius: 50%; width: 30px" id = 'disminuir' onclick="disminuir('Cantidad17')">-</button>
+                <input style="width: 120px; height: 25px;" type='number' id="Cantidad17" value="0" min="0"></p>
+                <a href="aceros.html" class="btn btn-danger">Agregar al carrito</a>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="card w-100 card-border mb-3">
+            <img src="imagenes/envasados.webp" class="card-img-top w-100" width="100" height="200" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Mortero Moctezuma</h5>
+              <select class="form-select" aria-label="cmbClavos">
+                <option selected>Selecciona una medida</option>
+                <option value="1">Moctezuma 50kg</option>
+                <option value="2">Moctezuma 25kg</option>
+                <option value="3">Moctezuma 10kg</option>
+              </select>
+              <p>   </p>
+              <button style="border-radius: 50%; width: 30px" id = 'aumentar' onclick="aumentar('Cantidad18')">+</button>
+              <button style="border-radius: 50%; width: 30px" id = 'disminuir' onclick="disminuir('Cantidad18')">-</button>
+              <input style="width: 120px; height: 25px;" type='number' id="Cantidad18" value="0" min="0"></p>
+              <a href="aceros.html" class="btn btn-danger">Agregar al carrito</a>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+    </div>
+
+
+    
+
+    <script src="js/funciones.js"></script>
+    
+</body>
+</html>
