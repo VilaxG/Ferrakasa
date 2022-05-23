@@ -5,7 +5,7 @@ $pass = $_POST['contrasena'];
 if(empty($correo) || empty($pass)){
     Header("Location: administrador.php");
 } else{
-    $query = "select idUsuario from usuario where email='".$correo."'and passwdHash='".$pass."';";    
+    $query = "select idUsuario from usuario where email='".$correo."'and pswd='".$pass."';";    
     $result=mysqli_query($conn,$query);
     $row = mysqli_fetch_array($result);
     if($row[0]!=null){

@@ -1,10 +1,11 @@
-body{
+body {
     z-index: 2;
     /*fondo con imagen y fijado*/
     background-image: url(fondo.jpg);
     /*position: fixed;*/
     background-attachment: fixed;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -22,7 +23,12 @@ html {
     height: 20%;
 }
 
-.seccion a{
+.seccion a {
+    width: 100%;
+    display: flex;
+}
+
+.seccionn a {
     width: 100%;
     display: flex;
 }
@@ -32,14 +38,14 @@ html {
     height: 50%;
 }
 
-svg{
+svg {
     /*background-color: blue;*/
     color: rgb(218, 96, 15);
     width: 100%;
     margin-bottom: 5px;
 }
 
-.externa{
+.externa {
     align-items: center;
     display: none;
     position: absolute;

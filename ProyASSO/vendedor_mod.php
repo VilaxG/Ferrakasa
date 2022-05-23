@@ -23,7 +23,7 @@ $row = mysqli_fetch_array($query);
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-light barra">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="adminpage.php">
                 <img src="ferrakasa.webp" alt="" height="40">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">

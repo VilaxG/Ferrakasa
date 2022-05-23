@@ -5,14 +5,14 @@ $id = $_GET['id_material'];
 
 $sql = "SELECT * FROM material WHERE id_material='$id'";
 
-$sql_med = "SELECT id_medida, text_medida FROM unidad_medida;";
+
 
 $sql_ti = "SELECT id_tienda, nombre_tienda FROM tienda;";
 
-$query      = mysqli_query($conn, $sql);
+$query = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($query);
 
-$query_med  = mysqli_query($conn, $sql_med);
+
 
 $query_ti   = mysqli_query($conn, $sql_ti);
 ?>
@@ -31,7 +31,7 @@ $query_ti   = mysqli_query($conn, $sql_ti);
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-light barra">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="adminpage.php">
                 <img src="ferrakasa.webp" alt="" height="40">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,19 +57,15 @@ $query_ti   = mysqli_query($conn, $sql_ti);
                     </select>
 
                     <select class="form-select" id="medida" name="medida" style="margin-bottom: 5px;">
-                        <?php
-                        while ($rw = mysqli_fetch_array($query_med)) {
-                        ?>
-                            <option value="<?php echo $rw['id_medida'] ?>">
-                                <?php echo $rw['text_medida'] ?>
-                            </option>
-                        <?php
-                        }
-                        ?>
+                        <option value="kg">kg</option>
+                        <option value="pza">pza</option>
+                        <option value="m">m</option>
+                        <option value="m2">m2</option>
+                        <option value="m3">m3</option>
                     </select>
                     <input type="text" class="form-control " name="producto" placeholder="Nombre" value="<?php echo $row['producto'] ?>">
                     <input type="number" class="form-control " name="almacen" placeholder="cantidad en el almacen" value="<?php echo $row['almacen'] ?>">
-                    <textarea type="text" class="form-control " name="descripcion" placeholder="descripcion del producto"  style="margin-bottom: 5px;" >
+                    <textarea type="text" class="form-control " name="descripcion" placeholder="descripcion del producto" style="margin-bottom: 5px;">
                     <?php echo $row['descripcion'] ?>
                     </textarea>
                     <input type="number" min="1" max="999" class="form-control " name="precio" placeholder="Precio por unidad" value="<?php echo $row['precio'] ?>">

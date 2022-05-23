@@ -1,12 +1,5 @@
 <?php
 include("conexion.php");
-#$sql = "SELECT *  FROM material";
-#$qry = "SELECT id_tienda,nombre_tienda from tienda;";
-$sql_med = "SELECT
-    id_medida,
-    text_medida
-FROM
-unidad_medida;";
 
 $sql_ti = "SELECT 
 id_tienda, nombre_tienda 
@@ -18,17 +11,15 @@ $sql =
     concat(m.id_tienda, ' - ', t.nombre_tienda) tienda,
     m.id_tienda id_t,
     m.producto producto,
-    u.text_medida medida,
     m.almacen almacen,
     m.descripcion descripcion,
     concat('$', m.precio) precio,
-    m.categoria categoria
+    m.categoria categoria,
+    m.medida medida
 FROM
     material m
 JOIN tienda t ON
     t.id_tienda = m.id_tienda
-JOIN unidad_medida u ON
-    u.id_medida = m.id_medida
     ORDER BY id_m;
 ";
 ?>
@@ -47,7 +38,7 @@ JOIN unidad_medida u ON
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-light barra">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="adminpage.php">
                 <img src="ferrakasa.webp" alt="" height="40">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,16 +65,11 @@ JOIN unidad_medida u ON
                     </select>
 
                     <select class="form-select" id="medida" name="medida" style="margin-bottom: 5px;">
-                    <?php
-                        $query = mysqli_query($conn, $sql_med);
-                        while ($row = mysqli_fetch_array($query)) {
-                        ?>
-                            <option value="<?php echo $row['id_medida'] ?>">
-                                <?php echo $row['text_medida'] ?>
-                            </option>
-                        <?php
-                        }
-                        ?>
+                        <option value="kg">kg</option>
+                        <option value="pza">pza</option>
+                        <option value="m">m</option>
+                        <option value="m2">m2</option>
+                        <option value="m3">m3</option>
                     </select>
                     <input type="text" class="form-control " name="producto" placeholder="Producto">
                     <input type="number" class="form-control " name="almacen" placeholder="Almacen">
