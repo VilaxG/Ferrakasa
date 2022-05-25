@@ -20,7 +20,7 @@ FROM
     material m
 JOIN tienda t ON
     t.id_tienda = m.id_tienda
-    ORDER BY id_m;
+    ORDER BY categoria;
 ";
 ?>
 <!DOCTYPE html>
@@ -75,7 +75,13 @@ JOIN tienda t ON
                     <input type="number" class="form-control " name="almacen" placeholder="Almacen">
                     <input type="text" class="form-control " name="descripcion" placeholder="Descripcion">
                     <input type="number" class="form-control " name="precio" placeholder="Precio por pieza">
-                    <input type="text" class="form-control " name="categoria" placeholder="Categoria">
+                    <select class="form-select" id="categoria" name="categoria" style="margin-bottom: 5px;">
+                        <option value="Envasados">Envasados</option>
+                        <option value="Aceros">Aceros</option>
+                        <option value="Agregados">Agregados</option>
+                        <option value="Tabique">Tabique</option>
+                        <option value="Madera">Madera</option>
+                    </select>
                     <input type="submit" class="btn btn-primary">
                 </form>
             </div>

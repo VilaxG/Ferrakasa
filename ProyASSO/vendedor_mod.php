@@ -37,7 +37,7 @@ $row = mysqli_fetch_array($query);
                 <input type="hidden" class="form-control " name="id_vendedor" value="<?php echo $row['id_vendedor']  ?>">
                 <input type="text" class="form-control " name="nombre" placeholder="Nombre" value="<?php echo $row['nombre'] ?>">
                 <input type="text" class="form-control " name="apellidos" placeholder="Apellidos" value="<?php echo $row['apellidos'] ?>">
-                <input type="text" class="form-control " name="telefono" placeholder="Telefono cel" value="<?php echo $row['telefono'] ?>">
+                <input type="number" class="form-control " name="telefono" placeholder="Telefono cel" value="<?php echo $row['telefono'] ?>">
                 <input type="submit" class="btn btn-primary btn-block" value="Actualizar">
                 <a href="personal.php" class="btn btn-danger">Cancelar</a>
             </form>

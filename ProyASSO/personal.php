@@ -51,10 +51,10 @@ $query = mysqli_query($conn, $sql);
             <div class="col-3">
                 <h2>Registrar nuevos vendedores</h2>
                 <form action="vendedor_a.php" method="POST">
-                    <input type="text" class="form-control " name="id_vendedor" placeholder="Id del vendedor">
+                    
                     <input type="text" class="form-control " name="nombre" placeholder="Nombre">
                     <input type="text" class="form-control " name="apellidos" placeholder="Apellidos">
-                    <input type="text" class="form-control " name="telefono" placeholder="Telefono cel">
+                    <input type="number" class="form-control " name="telefono" placeholder="Telefono cel">
                     <input type="submit" class="btn btn-primary">
                 </form>
             </div>

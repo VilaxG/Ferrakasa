@@ -69,9 +69,18 @@ $query_ti   = mysqli_query($conn, $sql_ti);
                     <?php echo $row['descripcion'] ?>
                     </textarea>
                     <input type="number" min="1" max="999" class="form-control " name="precio" placeholder="Precio por unidad" value="<?php echo $row['precio'] ?>">
-                    <input type="text" class="form-control " name="categoria" placeholder="categoria" value="<?php echo $row['categoria'] ?>">
+                    <!--                    
+                        <input type="text" class="form-control " name="categoria" placeholder="categoria" value="<?php echo $row['categoria'] ?>">
+                    -->
+                    <select class="form-select" id="categoria" name="categoria" style="margin-bottom: 5px;">
+                        <option value="Envasados">Envasados</option>
+                        <option value="Aceros">Aceros</option>
+                        <option value="Agregados">Agregados</option>
+                        <option value="Tabique">Tabique</option>
+                        <option value="Madera">Madera</option>
+                    </select>
                     <input type="submit" class="btn btn-primary btn-block" value="Actualizar">
-                    <a href="material.php" class="btn btn-danger">Cancelar</a>
+                    <a href="material.php" class="btn btn-danger btn-block">Cancelar</a>
                 </form>
             </div>
         </div>

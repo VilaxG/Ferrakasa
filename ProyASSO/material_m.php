@@ -16,7 +16,7 @@ $sql="UPDATE
 `material`
 SET
 `id_tienda` = '$id_tienda',
-`id_medida` = '$medida',
+`medida` = '$medida',
 `producto` = '$producto',
 `almacen` = '$almacen',
 `descripcion` = '$descipcion',
