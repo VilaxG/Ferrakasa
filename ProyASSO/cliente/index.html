@@ -45,22 +45,32 @@
               <li class="nav-item dropdown">
                 <a class="nav-link text-white" href="contacto.html">Contactos</a>
               </li>
-              <li class="nav-item dropdown">
-                <img src="/cliente/imagenes/cart.png" class="nav-link dropdown-toggle img-fluid" height="70px" width="70px" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  alt=""></img>
-                <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
-                  <table id="lista-carrito" class="table">
-                    <thead>
-                      <tr>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                      </tr>
-                    </thead>
-                    <tbody></tbody>
-                  </table>
-                  <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
-                  <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar Compra</a>
-                </div>
-              </li>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <img src="/xampp/htdocs/Proyecto - ASSO/cliente/imagenes/cart.png" class="nav-link dropdown-toggle img-fluid" height="70px"
+                            width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false"></img>
+                        <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                            <table id="lista-carrito" class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+
+                            <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                            <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar
+                                Compra</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
             </ul>
           </div>
         </div>
