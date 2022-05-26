@@ -78,7 +78,7 @@
                             Apartado para acceder a las herramientas de business intelligence
                         </p>
                     </div>
-                    <a href="personal.php" class="btn btn-warning">Administrar</a>
+                    <a href="bi.php" class="btn btn-warning">Administrar</a>
                 </div>
             </div>
 
