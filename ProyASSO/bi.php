@@ -1,63 +1,6 @@
 <?php
 include('conexion.php');
-
-$sql = "SELECT\n"
-
-    . "    f.fecha_compra fecha,\n"
-
-    . "    m.producto producto,\n"
-
-    . "    t.nombre_tienda lugar,\n"
-
-    . "    fa.cantidad cantidad\n"
-
-    . "FROM\n"
-
-    . "    factura f\n"
-
-    . "JOIN factura_material fa ON\n"
-
-    . "    f.id_factura = fa.id_factura\n"
-
-    . "JOIN material m ON\n"
-
-    . "    m.id_material = fa.id_material\n"
-
-    . "JOIN cliente c ON\n"
-
-    . "    f.id_cliente = c.id_cliente\n"
-
-    . "JOIN tienda t ON\n"
-
-    . "    t.id_tienda = f.id_tienda\n"
-
-    . "ORDER BY\n"
-
-    . "    `m`.`producto` ASC;";
-
-$sqlreb = "SELECT\n"
-
-    . "    t.nombre_tienda,\n"
-
-    . "    t.direccion,\n"
-
-    . "    m.producto,\n"
-
-    . "    m.almacen,\n"
-
-    . "    m.id_material\n"
-
-    . "FROM\n"
-
-    . "    material m\n"
-
-    . "JOIN tienda t ON\n"
-
-    . "    t.id_tienda = m.id_tienda\n"
-
-    . "ORDER BY\n"
-
-    . "    almacen;";
+include ('querysbi.php')
 
 ?>
 
@@ -165,15 +108,60 @@ $sqlreb = "SELECT\n"
                         </table>
                     </div>
                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis architecto commodi eveniet
-                        accusantium ratione earum nemo itaque dolorem vitae voluptatem? Magnam, saepe eum modi eligendi
-                        doloribus fugiat corrupti reiciendis qui.
+                    <table class="table">
+                            <thead class="table-success table-striped">
+                                <tr>
+                                    <th>Lugar</th>
+                                    <th>direccion</th>
+                                    <th>Producto</th>
+                                    <th>Cantidad vendida</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                $query = mysqli_query($conn, $sqlpm);
+                                while ($row = mysqli_fetch_array($query)) {
+                                ?>
+                                    <tr>
+                                        <th><?php echo $row[0] ?></th>
+                                        <th><?php echo $row[1] ?></th>
+                                        <th><?php echo $row[2] ?></th>
+                                        <th><?php echo $row[3] ?></th>
+                                       
+                                    </tr>
+                                <?php
+                                }
+                                ?>
+                            </tbody>
+                        </table>
                     </div>
                     <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, eius perferendis ipsum ratione
-                        quisquam, ex praesentium repellat veritatis tempora iure nihil? Harum exercitationem error
-                        maxime quibusdam, consequuntur alias iure unde! Odit nulla quod repellat dolorum praesentium
-                        pariatur assumenda rerum tempora?
+                    <table class="table">
+                            <thead class="table-success table-striped">
+                                <tr>
+                                    <th>Lugar</th>
+                                    <th>direccion</th>
+                                    <th>Producto</th>
+                                    <th>Cantidad vendida</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                $query = mysqli_query($conn, $sqlpmm);
+                                while ($row = mysqli_fetch_array($query)) {
+                                ?>
+                                    <tr>
+                                        <th><?php echo $row[0] ?></th>
+                                        <th><?php echo $row[1] ?></th>
+                                        <th><?php echo $row[2] ?></th>
+                                        <th><?php echo $row[3] ?></th>
+                                       
+                                    </tr>
+                                <?php
+                                }
+                                ?>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
