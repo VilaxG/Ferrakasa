@@ -1,6 +1,6 @@
 <?php
 include('conexion.php');
-include ('querysbi.php')
+include('querysbi.php')
 
 ?>
 
@@ -43,6 +43,9 @@ include ('querysbi.php')
                         </button>
                         <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
                             Productos menos vendidos
+                        </button>
+                        <button class="nav-link" id="v-pills-excel-tab" data-bs-toggle="pill" data-bs-target="#v-pills-excel" type="button" role="tab" aria-controls="v-pills-excel" aria-selected="false">
+                            Descargar datos
                         </button>
                     </div>
                 </div>
@@ -108,7 +111,7 @@ include ('querysbi.php')
                         </table>
                     </div>
                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                    <table class="table">
+                        <table class="table">
                             <thead class="table-success table-striped">
                                 <tr>
                                     <th>Lugar</th>
@@ -127,7 +130,7 @@ include ('querysbi.php')
                                         <th><?php echo $row[1] ?></th>
                                         <th><?php echo $row[2] ?></th>
                                         <th><?php echo $row[3] ?></th>
-                                       
+
                                     </tr>
                                 <?php
                                 }
@@ -136,7 +139,7 @@ include ('querysbi.php')
                         </table>
                     </div>
                     <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-                    <table class="table">
+                        <table class="table">
                             <thead class="table-success table-striped">
                                 <tr>
                                     <th>Lugar</th>
@@ -155,13 +158,25 @@ include ('querysbi.php')
                                         <th><?php echo $row[1] ?></th>
                                         <th><?php echo $row[2] ?></th>
                                         <th><?php echo $row[3] ?></th>
-                                       
+
                                     </tr>
                                 <?php
                                 }
                                 ?>
                             </tbody>
                         </table>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-excel" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                        <div class="row">
+                            <div class="col-2 btnRpts">
+                                <a href="reporteHV.php" class="btn btn-warning">Descargar historial de ventas</a>
+                                <br><br>
+                                <a href="reporteAlmacen.php" class="btn btn-warning">Descargar reporte de inventario actual</a>
+                                <br><br>
+                                <a href="reporteMV.php" class="btn btn-warning">Descargar reporte de productos mejor vendidos</a>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
