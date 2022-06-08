@@ -1,0 +1,97 @@
+
+<table class="table" border="1">
+    <thead class="table-success table-striped">
+        <tr>
+            <th>Fecha de la compra</th>
+            <th>Producto</th>
+            <th>Lugar</th>
+            <th>Cantidad</th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+                <th>2022-04-01</th>
+                <th>Anillo 3/8</th>
+                <th>Ferrekasa</th>
+                <th>30</th>
+            </tr>
+                    <tr>
+                <th>2022-04-01</th>
+                <th>Block Macizo</th>
+                <th>Ferrekasa</th>
+                <th>30</th>
+            </tr>
+                    <tr>
+                <th>2022-04-01</th>
+                <th>Anillo 1/4</th>
+                <th>Ferrekasa</th>
+                <th>30</th>
+            </tr>
+                    <tr>
+                <th>2022-04-01</th>
+                <th>Anillo 1</th>
+                <th>Ferrekasa</th>
+                <th>30</th>
+            </tr>
+                    <tr>
+                <th>2022-04-01</th>
+                <th>Armex</th>
+                <th>Ferrekasa</th>
+                <th>30</th>
+            </tr>
+                    <tr>
+                <th>2022-04-01</th>
+                <th>Clavo con Cabeza</th>
+                <th>Ferrekasa</th>
+                <th>30</th>
+            </tr>
+                    <tr>
+                <th>2022-04-01</th>
+                <th>Clavo sin cabeza</th>
+                <th>Ferrekasa</th>
+                <th>30</th>
+            </tr>
+                    <tr>
+                <th>2022-04-01</th>
+                <th>Clavo para Concreto</th>
+                <th>Ferrekasa</th>
+                <th>30</th>
+            </tr>
+                    <tr>
+                <th>2022-04-01</th>
+                <th>Cemento Cemex</th>
+                <th>Ferrekasa</th>
+                <th>30</th>
+            </tr>
+                    <tr>
+                <th>2022-04-01</th>
+                <th>Cemento Cruz Azul</th>
+                <th>Ferrekasa</th>
+                <th>40</th>
+            </tr>
+                    <tr>
+                <th>2022-04-01</th>
+                <th>Cemento Moctezuma</th>
+                <th>Ferrekasa</th>
+                <th>10</th>
+            </tr>
+                    <tr>
+                <th>2022-04-01</th>
+                <th>Yeso Cemex</th>
+                <th>Ferrekasa</th>
+                <th>30</th>
+            </tr>
+                    <tr>
+                <th>2022-04-01</th>
+                <th>Yeso Cruz Azul</th>
+                <th>Ferrekasa</th>
+                <th>10</th>
+            </tr>
+                    <tr>
+                <th>2022-04-01</th>
+                <th>Yeso Moctezuma</th>
+                <th>Ferrekasa</th>
+                <th>90</th>
+            </tr>
+            </tbody>
+</table>
