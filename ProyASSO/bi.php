@@ -168,7 +168,7 @@ include('querysbi.php')
                     </div>
                     <div class="tab-pane fade" id="v-pills-excel" role="tabpanel" aria-labelledby="v-pills-settings-tab">
                         <div class="row">
-                            <div class="col-2 btnRpts">
+                            <div class="col-3">
                                 <a href="reporteHV.php" class="btn btn-warning">Descargar historial de ventas</a>
                                 <br><br>
                                 <a href="reporteAlmacen.php" class="btn btn-warning">Descargar reporte de inventario actual</a>
