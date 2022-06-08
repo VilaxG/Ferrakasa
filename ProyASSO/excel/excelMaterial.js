@@ -84,13 +84,13 @@ document.getElementById('button').addEventListener("click", () => {
                 let row_2_data_3 = document.createElement('td');
                 row_2_data_3.innerHTML = array[i].Producto;
                 let row_2_data_4 = document.createElement('td');
-                row_2_data_4.innerHTML = array[i].Unidades_en_almacen;
+                row_2_data_4.innerHTML = array[i].Almacen;
                 let row_2_data_5 = document.createElement('td');
                 row_2_data_5.innerHTML = array[i].Categoria;
                 let row_2_data_6 = document.createElement('td');
                 row_2_data_6.innerHTML = array[i].Medida;
                 let row_2_data_7 = document.createElement('td');
-                row_2_data_7.innerHTML = array[i].Precio_unitario;
+                row_2_data_7.innerHTML = array[i].Precio;
 
                 row_2.appendChild(row_2_data_1);
                 row_2.appendChild(row_2_data_2);
@@ -102,6 +102,25 @@ document.getElementById('button').addEventListener("click", () => {
                 tbody.appendChild(row_2);
             }
             document.getElementById('button').disabled = true;
+            document.getElementById('subir').disabled = false;
         }
     }
+});
+
+$(document).on('ready', function() {
+    document.getElementById('subir').addEventListener("click", () => {
+        alert('Enviando Datos');
+        //alert(array[0].Nombre)
+        for (let i = 0; i < array.length; i++) {
+            $.ajax({
+                url: '../material_a.php',
+                data: {id_t:array[i].Tienda,medida:array[i].Medida,producto:array[i].Producto,almacen:array[i].Almacen,descripcion:array[i].Descripcion,precio:array[i].Precio,categoria:array[i].Categoria},
+                method: "POST",
+
+            })
+        }
+        alert('Datos enviados');
+        document.getElementById('subir').disabled = true;
+
+    });
 });

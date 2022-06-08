@@ -3,6 +3,7 @@ console.log(window.XLSX);
 document.getElementById('input').addEventListener("change", (event) => {
     selectedFile = event.target.files[0];
     document.getElementById('button').disabled = false;
+    
 })
 
 let data = [{
@@ -71,7 +72,7 @@ document.getElementById('button').addEventListener("click", () => {
             for (let i = 0; i < array.length; i++) {
                 let row_2 = document.createElement('tr');
                 let row_2_data_1 = document.createElement('td');
-                row_2_data_1.innerHTML = array[i].Nombre_tienda;
+                row_2_data_1.innerHTML = array[i].Nombre;
                 let row_2_data_2 = document.createElement('td');
                 row_2_data_2.innerHTML = array[i].Direccion;
                 let row_2_data_3 = document.createElement('td');
@@ -88,6 +89,25 @@ document.getElementById('button').addEventListener("click", () => {
                 tbody.appendChild(row_2);
             }
             document.getElementById('button').disabled = true;
+            document.getElementById('subir').disabled = false;
         }
     }
+});
+
+$(document).on('ready', function() {
+    document.getElementById('subir').addEventListener("click", () => {
+        alert('Enviando Datos');
+        //alert(array[0].Nombre)
+        for (let i = 0; i < array.length; i++) {
+            $.ajax({
+                url: '../tienda_a.php',
+                data: { nombre_tienda: array[i].Nombre, direccion: array[i].Direccion, telefono: array[i].Telefono, encargado: array[i].Encargado },
+                method: "POST",
+
+            })
+        }
+        alert('Datos enviados');
+        document.getElementById('subir').disabled = true;
+
+    });
 });

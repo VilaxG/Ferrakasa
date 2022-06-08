@@ -81,6 +81,7 @@ document.getElementById('button').addEventListener("click", () => {
                 tbody.appendChild(row_2);
             }
             document.getElementById('button').disabled = true;
+            document.getElementById('subir').disabled = false;
         }
     }
 });
@@ -97,6 +98,7 @@ $(document).on('ready', function() {
             })
         }
         alert('Datos enviados');
+        document.getElementById('subir').disabled = true;
 
     });
 });

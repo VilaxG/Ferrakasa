@@ -57,6 +57,7 @@ $query = mysqli_query($conn, $sql);
                     <input type="number" class="form-control " name="telefono" placeholder="Telefono cel">
                     <input type="submit" class="btn btn-primary">
                 </form>
+                <a href="excel/excelVendedor.php" class="btn btn-primary" target="_blank">Carga masiva de informacion</a>
             </div>
             <div class="col-8">
                 <h2>Modificacion y Bajas de vendedores</h2>

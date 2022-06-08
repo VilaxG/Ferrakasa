@@ -38,6 +38,7 @@ $query = mysqli_query($conn, $sql);
                     <input type="text" class="form-control " name="encargado" placeholder="Encargado">
                     <input type="submit" class="btn btn-primary">
                 </form>
+                <a href="excel/excelTienda.php" class="btn btn-primary" target="_blank">Carga masiva de informacion</a>
             </div>
             <div class="col-9">
                 <h2>Modificacion y Bajas de tiendas</h2>

@@ -84,6 +84,7 @@ JOIN tienda t ON
                     </select>
                     <input type="submit" class="btn btn-primary">
                 </form>
+                <a href="excel/excelMaterial.php" class="btn btn-primary" target="_blank">Carga masiva de informacion</a>
             </div>
             <div class="col-9">
                 <h2>Modificacion y Bajas de materiales</h2>
