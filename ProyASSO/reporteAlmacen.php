@@ -5,12 +5,12 @@ header("Content-Disposition: attachment; filename=rep_almacen.xls");
 $sql =
     "SELECT
     m.id_material id_m,
-    concat(m.id_tienda, ' - ', t.nombre_tienda) tienda,
+    t.nombre_tienda tienda,
     m.id_tienda id_t,
     m.producto producto,
     m.almacen almacen,
     m.descripcion descripcion,
-    concat('$', m.precio) precio,
+    m.precio precio,
     m.categoria categoria,
     m.medida medida
 FROM
@@ -28,10 +28,10 @@ JOIN tienda t ON
             <th>Tienda</th>
             <th>Descripcion</th>
             <th>Producto</th>
-            <th>Unidades en almacen</th>
+            <th>Unidades_en_almacen</th>
             <th>Categoria</th>
             <th>Medida</th>
-            <th>Precio unitario</th>
+            <th>Precio_unitario</th>
             <th></th>
             <th></th>
         </tr>

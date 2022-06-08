@@ -1,0 +1,280 @@
+
+<table class="table" border="1">
+    <thead class="table-success table-striped">
+        <tr>
+            <th>ID</th>
+            <th>Tienda</th>
+            <th>Descripcion</th>
+            <th>Producto</th>
+            <th>Unidades_en_almacen</th>
+            <th>Categoria</th>
+            <th>Medida</th>
+            <th>Precio_unitario</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+                    <tr>
+                <th>1</th>
+                <th>Ferrekasa</th>
+                <th>                                                            Varilla de acero para construcción                                                            </th>
+                <th>varilla</th>
+                <th>60</th>
+                <th>Aceros</th>
+                <th>kg</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>2</th>
+                <th>Ferrekasa</th>
+                <th>Anillos de acero vendidos por pieza</th>
+                <th>Anillo 1/4</th>
+                <th>60</th>
+                <th>Aceros</th>
+                <th>pza</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>3</th>
+                <th>Ferrekasa</th>
+                <th>                    Anillos de acero vendidos por pieza                    </th>
+                <th>Anillo 3/8</th>
+                <th>60</th>
+                <th>Aceros</th>
+                <th>pza</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>4</th>
+                <th>Ferrekasa</th>
+                <th>                    Anillo de acero vendido por pieza                    </th>
+                <th>Anillo 1/2</th>
+                <th>60</th>
+                <th>Aceros</th>
+                <th>pza</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>5</th>
+                <th>Ferrekasa</th>
+                <th>Anillo de 1 pulgada vendidos por pieza</th>
+                <th>Anillo 1</th>
+                <th>60</th>
+                <th>Aceros</th>
+                <th>pza</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>6</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Armex</th>
+                <th>60</th>
+                <th>Aceros</th>
+                <th>pza</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>7</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Clavo con Cabeza</th>
+                <th>60</th>
+                <th>Aceros</th>
+                <th>pza</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>8</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Clavo sin cabeza</th>
+                <th>60</th>
+                <th>Aceros</th>
+                <th>pza</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>9</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Clavo para Concreto</th>
+                <th>60</th>
+                <th>Aceros</th>
+                <th>pza</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>17</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Arena</th>
+                <th>50</th>
+                <th>Agregados</th>
+                <th>kg</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>18</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Grava</th>
+                <th>60</th>
+                <th>Agregados</th>
+                <th>kg</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>10</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Cemento Cemex</th>
+                <th>60</th>
+                <th>Envasados</th>
+                <th>kg</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>11</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Cemento Cruz Azul</th>
+                <th>60</th>
+                <th>Envasados</th>
+                <th>kg</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>12</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Cemento Moctezuma</th>
+                <th>60</th>
+                <th>Envasados</th>
+                <th>kg</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>13</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Yeso Cemex</th>
+                <th>60</th>
+                <th>Envasados</th>
+                <th>kg</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>14</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Yeso Cruz Azul</th>
+                <th>60</th>
+                <th>Envasados</th>
+                <th>kg</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>15</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Yeso Moctezuma</th>
+                <th>60</th>
+                <th>Envasados</th>
+                <th>kg</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>16</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Mortero Cemex</th>
+                <th>60</th>
+                <th>Envasados</th>
+                <th>kg</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>20</th>
+                <th>Ferrekasa</th>
+                <th>                                                                                                                        </th>
+                <th>Block Macizo</th>
+                <th>1</th>
+                <th>Envasados</th>
+                <th>kg</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>21</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Barrote de Madera</th>
+                <th>60</th>
+                <th>Madera</th>
+                <th>m</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>22</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Chaflan de Madera</th>
+                <th>50</th>
+                <th>Madera</th>
+                <th>m</th>
+                <th>60</th>
+            </tr>
+                    <tr>
+                <th>23</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Polín de Madera</th>
+                <th>60</th>
+                <th>Madera</th>
+                <th>m</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>24</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Tarima</th>
+                <th>60</th>
+                <th>Madera</th>
+                <th>m</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>25</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Triplay</th>
+                <th>20</th>
+                <th>Madera</th>
+                <th>m2</th>
+                <th>60</th>
+            </tr>
+                    <tr>
+                <th>19</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Block Hueco</th>
+                <th>600</th>
+                <th>Tabique</th>
+                <th>pza</th>
+                <th>50</th>
+            </tr>
+                    <tr>
+                <th>26</th>
+                <th>Ferrekasa</th>
+                <th></th>
+                <th>Tabique Rojo</th>
+                <th>60</th>
+                <th>Tabique</th>
+                <th>pza</th>
+                <th>50</th>
+            </tr>
+            </tbody>
+</table>
